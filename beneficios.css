@@ -1,0 +1,23 @@
+/* ══════════════════════════════
+   ESTILO — Beneficios destacados (30 dias prueba, soporte humano)
+   Separado del CSS principal, mismo criterio que beneficios.js
+   20 ago 2026.
+══════════════════════════════ */
+#beneficios-destacados{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+}
+.beneficio-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 14px;
+  border-radius:20px;
+  border:1px solid rgba(201,162,39,.4);
+  background:rgba(201,162,39,.08);
+  color:#C9A227;
+  font-size:.82rem;
+  font-weight:600;
+}
