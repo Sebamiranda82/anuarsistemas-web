@@ -192,6 +192,8 @@
 </style>
 <link rel="stylesheet" href="beneficios.css">
 <script src="beneficios.js" defer></script>
+<link rel="stylesheet" href="tema-claro.css">
+<script src="tema-toggle.js"></script>
 </head>
 <body>
 
@@ -202,6 +204,7 @@
       <a href="#programas" class="navlink">Programas</a>
       <a href="#trayectoria" class="navlink">Trayectoria</a>
       <a href="#contacto" class="navlink">Contacto</a>
+      <button id="btnTemaAnuar" onclick="toggleTemaAnuar()" style="background:none;border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;padding:4px 10px;font-size:.95rem;">🌙</button>
     </div>
   </nav>
 
@@ -248,25 +251,17 @@
         <div class="sec-eyebrow">Desde 2007</div>
         <h2 class="sec-title">Nuestra trayectoria</h2>
       </div>
-      <p class="sec-note">Casi dos décadas sumando herramientas y desarrollo.</p>
+      <p class="sec-note">Dos décadas sumando herramientas y desarrollo.</p>
     </div>
     <div class="log">
-      <div class="log-row">
-        <span class="log-year">2007</span>
-        <p class="log-text">Primeros pasos en desarrollo web, con Dreamweaver.</p>
-      </div>
-      <div class="log-row">
-        <span class="log-year">2008</span>
-        <p class="log-text">Incursión en Visual Basic 6.0 y formación en Analistas de Sistemas.</p>
-      </div>
-      <div class="log-row">
-        <span class="log-year">·</span>
-        <p class="log-text">Desarrollo de complementos para aplicaciones empresariales y salto a tecnologías PHP y MySQL, pasando por C++.</p>
-      </div>
-      <div class="log-row">
-        <span class="log-year">Hoy</span>
-        <p class="log-text">La combinación de todas estas herramientas y la trayectoria en un amplio conocimiento de Sistemas nos da el aval para ofrecer un servicio con experiencia real. De la vieja escuela.</p>
-      </div>
+      <p style="font-size:1rem;line-height:1.8;max-width:62ch;color:var(--muted);">
+        <strong style="color:var(--text);">2004.</strong> Inicio en manejo de sistemas de facturación.
+        <strong style="color:var(--text);">2006.</strong> Primeros pasos en desarrollo web.
+        <strong style="color:var(--text);">2008.</strong> Formación y prácticas, en Visual Basic 6.0 y como analistas de Sistemas.
+        <strong style="color:var(--text);">2010 en adelante...</strong> Desarrollo de complementos para aplicaciones empresariales y ampliación de conocimientos en tecnologías PHP, MySQL y C++.
+        <br><br>
+        <strong style="color:var(--rust);">Hoy.</strong> La combinación y experiencia en todas estas herramientas y manejos de distintos Sistemas de facturación nos dan el aval para ofrecer un servicio con experiencia real.
+      </p>
     </div>
   </section>
 

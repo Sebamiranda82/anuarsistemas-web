@@ -1,0 +1,18 @@
+/* ══════════════════════════════
+   TEMA CLARO — Anuar Sistemas (landing page)
+   Mismo mecanismo que CFB (atributo data-theme en <html> + localStorage,
+   ver tema-toggle.js). Archivo separado, no mezclado con el CSS
+   principal en index.html. 20 ago 2026.
+══════════════════════════════ */
+html[data-theme="light"]{
+  --bg:#FFFFFF;
+  --surface:#F6F2E9;
+  --surface2:#EFE9DC;
+  --text:#1B1815;
+  --muted:#6B6255;
+  --rust:#C1571F;
+  --rust-dim:#8A3E16;
+  --brass:#96760F;
+  --olive:#557045;
+  --border:#DDD6C7;
+}

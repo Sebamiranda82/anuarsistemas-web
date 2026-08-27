@@ -5,7 +5,6 @@
    estructura de la pagina. 20 ago 2026.
 ══════════════════════════════ */
 const BENEFICIOS_DESTACADOS = [
-  { icono: '🗓️', texto: '30 días de prueba, sin límite de facturación' },
   { icono: '🧑', texto: 'Soporte humano. No robot, no agente, no IA.' }
 ];
 
