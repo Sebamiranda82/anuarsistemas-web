@@ -1,16 +1,52 @@
 {
   "funciones": [
-    { "titulo": "Facturación SRI completa", "detalle": "Factura, Nota de Crédito, Nota de Débito, Guía de Remisión y Retenciones" },
-    { "titulo": "Presupuestos", "detalle": "Cotizaciones que se convierten en factura" },
-    { "titulo": "Productos con fotos y stock", "detalle": "Inventario, categorías y control de stock automático" },
-    { "titulo": "Compras a proveedores", "detalle": "Ingreso manual o automático leyendo el PDF de la factura" },
-    { "titulo": "Vendedores con comisión", "detalle": "Reportes de ventas por vendedor" },
-    { "titulo": "Reportes completos", "detalle": "Ventas por cliente, producto y proveedores" },
-    { "titulo": "Funciona sin internet", "detalle": "Consultá todo aunque se corte la conexión" }
+    {
+      "titulo": "Facturación SRI completa",
+      "detalle": "Factura, Nota de Crédito, Nota de Débito, Guía de Remisión y Retenciones"
+    },
+    {
+      "titulo": "Presupuestos",
+      "detalle": "Cotizaciones que se convierten en factura"
+    },
+    {
+      "titulo": "Productos con fotos y stock",
+      "detalle": "Inventario, categorías y control de stock automático"
+    },
+    {
+      "titulo": "Compras a proveedores",
+      "detalle": "Ingreso manual o automático leyendo el PDF de la factura"
+    },
+    {
+      "titulo": "Vendedores con comisión",
+      "detalle": "Reportes de ventas por vendedor"
+    },
+    {
+      "titulo": "Reportes completos",
+      "detalle": "Ventas por cliente, producto y proveedores"
+    },
+    {
+      "titulo": "Funciona sin internet",
+      "detalle": "Consultá todo aunque se corte la conexión"
+    }
   ],
   "planes": [
-    { "nombre": "GRATUITO", "precio": "$0", "detalle": "30 facturas/mes", "anual": "" },
-    { "nombre": "BÁSICO", "precio": "$5", "detalle": "hasta 150 facturas/mes", "anual": "$50 / año" },
-    { "nombre": "ILIMITADO", "precio": "$10", "detalle": "facturación ilimitada", "anual": "$99 / año" }
+    {
+      "nombre": "GRATUITO",
+      "precio": "$0",
+      "detalle": "30 facturas",
+      "anual": ""
+    },
+    {
+      "nombre": "BÁSICO",
+      "precio": "$5",
+      "detalle": "hasta 150 facturas",
+      "anual": "$50 / año"
+    },
+    {
+      "nombre": "ILIMITADO",
+      "precio": "$10",
+      "detalle": "facturación ilimitada",
+      "anual": "$99 / año"
+    }
   ]
 }
