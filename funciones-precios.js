@@ -1,29 +1,23 @@
 /* ══════════════════════════════
    FUNCIONES Y PRECIOS — Anuar Sistemas (landing page)
-   Misma informacion que el anuncio de Instagram, para que la gente no
-   tenga que hacer zoom en una foto - contenido separado del HTML,
-   mismo criterio que beneficios.js. 20 ago 2026.
+   Lee de datos-funciones-precios.json (fuente UNICA compartida con el
+   generador del anuncio de Instagram) - un solo lugar para cambiar
+   funciones/precios, nunca se desincronizan entre la pagina y la
+   publicidad. 20 ago 2026.
 ══════════════════════════════ */
-const FUNCIONES_DESTACADAS = [
-  { titulo: "Facturación SRI completa", detalle: "Factura, Nota de Crédito, Nota de Débito, Guía de Remisión y Retenciones" },
-  { titulo: "Presupuestos", detalle: "Cotizaciones que se convierten en factura" },
-  { titulo: "Productos con fotos y stock", detalle: "Inventario, categorías y control de stock automático" },
-  { titulo: "Compras a proveedores", detalle: "Ingreso manual o automático leyendo el PDF de la factura" },
-  { titulo: "Vendedores con comisión", detalle: "Reportes de ventas por vendedor" },
-  { titulo: "Reportes completos", detalle: "Ventas por cliente, producto y proveedores" },
-  { titulo: "Funciona sin internet", detalle: "Consultá todo aunque se corte la conexión" }
-];
+async function renderFuncionesPrecios(){
+  let datos;
+  try{
+    const r = await fetch('datos-funciones-precios.json');
+    datos = await r.json();
+  }catch(e){
+    console.warn('No se pudo cargar datos-funciones-precios.json', e);
+    return;
+  }
 
-const PLANES = [
-  { nombre: "GRATUITO", precio: "$0", detalle: "30 facturas/mes", anual: "" },
-  { nombre: "BÁSICO", precio: "$5", detalle: "hasta 150 facturas/mes", anual: "$50 / año" },
-  { nombre: "ILIMITADO", precio: "$10", detalle: "facturación ilimitada", anual: "$99 / año" }
-];
-
-function renderFuncionesPrecios(){
   const contF = document.getElementById('lista-funciones');
   if(contF){
-    contF.innerHTML = FUNCIONES_DESTACADAS.map(f => `
+    contF.innerHTML = datos.funciones.map(f => `
       <div class="funcion-row">
         <div class="funcion-titulo">${f.titulo}</div>
         <div class="funcion-detalle">${f.detalle}</div>
@@ -32,7 +26,7 @@ function renderFuncionesPrecios(){
   }
   const contP = document.getElementById('lista-planes');
   if(contP){
-    contP.innerHTML = PLANES.map(p => `
+    contP.innerHTML = datos.planes.map(p => `
       <div class="plan-card">
         <div class="plan-nombre">${p.nombre}</div>
         <div class="plan-precio">${p.precio}<span class="plan-mes">/mes</span></div>
