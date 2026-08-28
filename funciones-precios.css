@@ -1,0 +1,71 @@
+/* ══════════════════════════════
+   ESTILO — Funciones y Precios (landing page)
+   Reutiliza la paleta ya existente del sitio (--rust, --brass,
+   --surface, --border, --text, --muted), archivo separado. 20 ago 2026.
+══════════════════════════════ */
+#lista-funciones{
+  display:flex;
+  flex-direction:column;
+  margin-top:24px;
+}
+.funcion-row{
+  padding:16px 0;
+  border-bottom:1px solid var(--border);
+}
+.funcion-titulo{
+  font-family:'Archivo Black',sans-serif;
+  font-size:1rem;
+  color:var(--text);
+  margin-bottom:4px;
+}
+.funcion-detalle{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.82rem;
+  color:var(--muted);
+}
+
+#lista-planes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:16px;
+  margin-top:40px;
+}
+.plan-card{
+  background:var(--surface);
+  border:1.5px solid var(--brass);
+  border-radius:8px;
+  padding:28px 18px;
+  text-align:center;
+}
+.plan-nombre{
+  font-family:'IBM Plex Mono',monospace;
+  font-weight:700;
+  font-size:.85rem;
+  letter-spacing:.06em;
+  color:var(--brass);
+  margin-bottom:10px;
+}
+.plan-precio{
+  font-family:'Archivo Black',sans-serif;
+  font-size:2.4rem;
+  color:var(--rust);
+  margin-bottom:8px;
+}
+.plan-mes{
+  font-size:.9rem;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-weight:400;
+}
+.plan-detalle{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.82rem;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+.plan-anual{
+  font-family:'IBM Plex Mono',monospace;
+  font-weight:700;
+  font-size:.82rem;
+  color:var(--brass);
+}
