@@ -4,9 +4,7 @@
    estos datos (dias de prueba, tipo de soporte) sin tocar la
    estructura de la pagina. 20 ago 2026.
 ══════════════════════════════ */
-const BENEFICIOS_DESTACADOS = [
-  { icono: '🧑', texto: 'Soporte humano. No robot, no agente, no IA.' }
-];
+const BENEFICIOS_DESTACADOS = [];
 
 function renderBeneficiosDestacados(){
   const cont = document.getElementById('beneficios-destacados');
