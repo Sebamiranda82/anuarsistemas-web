@@ -39,14 +39,14 @@
     {
       "nombre": "BÁSICO",
       "precio": "$5",
-      "detalle": "hasta 150 facturas",
+      "detalle": "90 facturas total",
       "anual": "$50 / año"
     },
     {
       "nombre": "ILIMITADO",
-      "precio": "$10",
+      "precio": "$12",
       "detalle": "facturación ilimitada",
-      "anual": "$99 / año"
+      "anual": "$100 / año"
     }
   ]
 }
