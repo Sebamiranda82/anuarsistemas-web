@@ -69,3 +69,26 @@
   font-size:.82rem;
   color:var(--brass);
 }
+
+/* 17 oct 2026: lista de lo que incluye cada plan */
+.plan-incluye{
+  list-style:none;
+  margin:16px 0 0;
+  padding:14px 0 0;
+  border-top:1px solid var(--border);
+  text-align:left;
+}
+.plan-incluye li{
+  font-size:.8rem;
+  line-height:1.5;
+  color:var(--muted);
+  padding:4px 0 4px 16px;
+  position:relative;
+}
+.plan-incluye li::before{
+  content:'✓';
+  position:absolute;
+  left:0;
+  color:var(--brass);
+  font-weight:700;
+}
