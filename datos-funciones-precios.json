@@ -24,19 +24,28 @@
       "precio": "$0",
       "periodo": "",
       "detalle": "30 días gratis, 30 facturas",
-      "anual": ""
+      "anual": "",
+      "incluye": [
+        "Funciones generales incluidas"
+      ]
     },
     {
       "nombre": "ESTÁNDAR",
       "precio": "$5",
       "detalle": "100 facturas por mes",
-      "anual": "$50 / año"
+      "anual": "$50 / año",
+      "incluye": [
+        "Funciones generales incluidas"
+      ]
     },
     {
       "nombre": "AVANZADO",
       "precio": "$10",
       "detalle": "Facturación ilimitada",
-      "anual": "$90 / año"
+      "anual": "$90 / año",
+      "incluye": [
+        "Funciones generales incluidas"
+      ]
     },
     {
       "nombre": "FULL",
@@ -44,10 +53,11 @@
       "detalle": "Facturación ilimitada",
       "anual": "$180 / año",
       "incluye": [
-        "Plan Avanzado, y además:",
+        "Funciones generales incluidas",
         "App de escritorio local: funciona también sin Internet para seguir facturando; sube automáticamente lo pendiente al SRI",
         "Búsqueda por voz en productos",
-        "Lectura de productos por código de barras o QR"
+        "Lectura de productos por código de barras o QR",
+        "Inventario automático: stock resultante de compras y ventas. Incluye un manejo opcional de ingresos y egresos manuales"
       ]
     }
   ]
