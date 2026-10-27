@@ -31,9 +31,9 @@
     },
     {
       "nombre": "ESTÁNDAR",
-      "precio": "$7",
+      "precio": "$5",
       "detalle": "100 facturas por mes · IVA incluido",
-      "anual": "$70 / año",
+      "anual": "$50 / año",
       "incluye": [
         "Funciones generales incluidas"
       ]
