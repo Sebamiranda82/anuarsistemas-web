@@ -32,7 +32,7 @@
     {
       "nombre": "ESTÁNDAR",
       "precio": "$5",
-      "detalle": "100 facturas por mes · IVA incluido",
+      "detalle": "100 facturas por mes",
       "anual": "$50 / año",
       "incluye": [
         "Funciones generales incluidas"
@@ -41,7 +41,7 @@
     {
       "nombre": "FULL",
       "precio": "$10",
-      "detalle": "Facturación ilimitada · IVA incluido",
+      "detalle": "Facturación ilimitada",
       "anual": "$100 / año",
       "incluye": [
         "Funciones generales incluidas",
