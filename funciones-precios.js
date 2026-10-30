@@ -37,6 +37,9 @@ async function renderFuncionesPrecios(){
       const periodo = (p.periodo === undefined) ? '/mes' : p.periodo;
       const incluye = Array.isArray(p.incluye) && p.incluye.length
         ? `<ul class="plan-incluye">${p.incluye.map(i => `<li>${escHtml(i)}</li>`).join('')}</ul>` : '';
+      // ESTANDAR_NO_INCLUYE_V1: lo que el plan NO trae (campo opcional "noIncluye")
+      const noIncluye = Array.isArray(p.noIncluye) && p.noIncluye.length
+        ? `<div class="plan-noincluye-t">No incluye</div><ul class="plan-noincluye">${p.noIncluye.map(i => `<li>${escHtml(i)}</li>`).join('')}</ul>` : '';
       return `
       <div class="plan-card">
         <div class="plan-nombre">${escHtml(p.nombre)}</div>
@@ -44,6 +47,7 @@ async function renderFuncionesPrecios(){
         <div class="plan-detalle">${escHtml(p.detalle)}</div>
         ${p.anual ? `<div class="plan-anual">${escHtml(p.anual)}</div>` : ''}
         ${incluye}
+        ${noIncluye}
       </div>`;
     }).join('');
   }

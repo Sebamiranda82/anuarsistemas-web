@@ -36,6 +36,11 @@
       "anual": "$50 / año",
       "incluye": [
         "Funciones generales incluidas"
+      ],
+      "noIncluye": [
+        "Factura de compra",
+        "Facturación Offline (sin Internet)",
+        "Registro de actividad"
       ]
     },
     {

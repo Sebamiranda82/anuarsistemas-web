@@ -92,3 +92,34 @@
   color:var(--brass);
   font-weight:700;
 }
+
+/* ESTANDAR_NO_INCLUYE_V1: lo que un plan NO incluye */
+.plan-noincluye-t{
+  margin:12px 0 0;
+  text-align:left;
+  font-size:.72rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:700;
+}
+.plan-noincluye{
+  list-style:none;
+  margin:6px 0 0;
+  padding:0;
+  text-align:left;
+}
+.plan-noincluye li{
+  font-size:.8rem;
+  line-height:1.5;
+  color:var(--muted);
+  padding:3px 0 3px 16px;
+  position:relative;
+}
+.plan-noincluye li::before{
+  content:'✕';
+  position:absolute;
+  left:0;
+  color:var(--rust, #b04a2a);
+  font-weight:700;
+}
