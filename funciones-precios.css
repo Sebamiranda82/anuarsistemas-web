@@ -123,3 +123,19 @@
   color:var(--rust, #b04a2a);
   font-weight:700;
 }
+
+/* PLANES_ADEMAS_V1: "Incluye además:" */
+.plan-ademas-t{
+  margin:12px 0 0;
+  text-align:left;
+  font-size:.72rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--brass);
+  font-weight:700;
+}
+.plan-ademas{
+  margin-top:6px;
+  border-top:0;
+  padding-top:0;
+}

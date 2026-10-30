@@ -38,6 +38,9 @@ async function renderFuncionesPrecios(){
       const incluye = Array.isArray(p.incluye) && p.incluye.length
         ? `<ul class="plan-incluye">${p.incluye.map(i => `<li>${escHtml(i)}</li>`).join('')}</ul>` : '';
       // ESTANDAR_NO_INCLUYE_V1: lo que el plan NO trae (campo opcional "noIncluye")
+      // PLANES_ADEMAS_V1: lo que el plan trae ADEMÁS de lo general (campo opcional "incluyeAdemas")
+      const ademas = Array.isArray(p.incluyeAdemas) && p.incluyeAdemas.length
+        ? `<div class="plan-ademas-t">Incluye además:</div><ul class="plan-incluye plan-ademas">${p.incluyeAdemas.map(i => `<li>${escHtml(i)}</li>`).join('')}</ul>` : '';
       const noIncluye = Array.isArray(p.noIncluye) && p.noIncluye.length
         ? `<div class="plan-noincluye-t">No incluye</div><ul class="plan-noincluye">${p.noIncluye.map(i => `<li>${escHtml(i)}</li>`).join('')}</ul>` : '';
       return `
@@ -47,6 +50,7 @@ async function renderFuncionesPrecios(){
         <div class="plan-detalle">${escHtml(p.detalle)}</div>
         ${p.anual ? `<div class="plan-anual">${escHtml(p.anual)}</div>` : ''}
         ${incluye}
+        ${ademas}
         ${noIncluye}
       </div>`;
     }).join('');

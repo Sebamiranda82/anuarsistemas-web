@@ -14,8 +14,8 @@
       "detalle": "Formato A4 y tickets"
     },
     {
-      "titulo": "Control de inventario",
-      "detalle": "Stock real automático: ingresos por compras y egresos por ventas, con ajustes manuales opcionales de ingreso y egreso"
+      "titulo": "Inventario",
+      "detalle": "Egresos de stock por ventas, con ajustes manuales opcionales de ingreso y egreso"
     }
   ],
   "planes": [
@@ -36,11 +36,6 @@
       "anual": "$50 / año",
       "incluye": [
         "Funciones generales incluidas"
-      ],
-      "noIncluye": [
-        "Factura de compra",
-        "Facturación Offline (sin Internet)",
-        "Registro de actividad"
       ]
     },
     {
@@ -49,8 +44,13 @@
       "detalle": "Facturación ilimitada",
       "anual": "$100 / año",
       "incluye": [
-        "Funciones generales incluidas",
-        "Versión offline: app de escritorio local que funciona también sin Internet para seguir facturando; sube automáticamente lo pendiente al SRI"
+        "Funciones generales incluidas"
+      ],
+      "incluyeAdemas": [
+        "Factura de compra",
+        "Facturación Offline (sin Internet)",
+        "Registro de actividad",
+        "Control Inventario completo (Resultado de compras, ventas y ajustes manuales)"
       ]
     }
   ]
