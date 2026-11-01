@@ -1,0 +1,57 @@
+{
+  "programa": "SIS-001 / Ferretería",
+  "funciones": [
+    {
+      "titulo": "Módulos",
+      "detalle": "Clientes, Productos, Usuarios, Vendedores, Proveedores y Reportes"
+    },
+    {
+      "titulo": "Documentos",
+      "detalle": "Proforma, factura SRI, nota de crédito, nota de débito, guía de remisión y retención"
+    },
+    {
+      "titulo": "Impresión",
+      "detalle": "Formato A4 y tickets"
+    },
+    {
+      "titulo": "Control de inventario",
+      "detalle": "Stock real automático: ingresos por compras y egresos por ventas, con ajustes manuales opcionales de ingreso y egreso"
+    }
+  ],
+  "planes": [
+    {
+      "nombre": "DEMO",
+      "precio": "$0",
+      "periodo": "",
+      "detalle": "30 días gratis, 30 facturas",
+      "anual": "",
+      "incluye": [
+        "Funciones generales incluidas"
+      ]
+    },
+    {
+      "nombre": "ESTÁNDAR",
+      "precio": "$5",
+      "detalle": "100 facturas por mes",
+      "anual": "$50 / año",
+      "incluye": [
+        "Funciones generales incluidas"
+      ],
+      "noIncluye": [
+        "Factura de compra",
+        "Facturación Offline (sin Internet)",
+        "Registro de actividad"
+      ]
+    },
+    {
+      "nombre": "FULL",
+      "precio": "$10",
+      "detalle": "Facturación ilimitada",
+      "anual": "$100 / año",
+      "incluye": [
+        "Funciones generales incluidas",
+        "Versión offline: app de escritorio local que funciona también sin Internet para seguir facturando; sube automáticamente lo pendiente al SRI"
+      ]
+    }
+  ]
+}
