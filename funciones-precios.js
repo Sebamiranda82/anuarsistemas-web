@@ -1,24 +1,26 @@
 /* ══════════════════════════════
    FUNCIONES Y PRECIOS — Anuar Sistemas (landing page)
-   Lee de datos-funciones-precios.json (fuente UNICA compartida con el
-   generador del anuncio de Instagram) - un solo lugar para cambiar
-   funciones/precios, nunca se desincronizan entre la pagina y la
-   publicidad. 20 ago 2026.
-   17 oct 2026: planes Demo / Estándar / Full de Ferretería. Campos
-   opcionales por plan: "periodo" (por defecto "/mes"; vacío = sin
-   periodo) e "incluye" (lista de lo que trae el plan).
+   TABLA_PLANES_V1 (3 nov 2026)
+   - Precios/planes: tabla-planes.json (id, importe, nombre, descripcion,
+     usuarios). ES LA UNICA TABLA QUE SE EDITA PARA CAMBIAR PRECIOS.
+   - Funciones generales y lista de incluye/incluyeAdemas por plan (clave =
+     id): datos-funciones-precios.json
 ══════════════════════════════ */
 function escHtml(s){
   return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+async function cargarJson(url){
+  const r = await fetch(url, { cache: 'no-cache' });
+  if(!r.ok) throw new Error(url + ' ' + r.status);
+  return r.json();
+}
 
 async function renderFuncionesPrecios(){
-  let datos;
+  let datos, tabla;
   try{
-    const r = await fetch('datos-funciones-precios.json');
-    datos = await r.json();
+    [datos, tabla] = await Promise.all([cargarJson('datos-funciones-precios.json'), cargarJson('tabla-planes.json')]);
   }catch(e){
-    console.warn('No se pudo cargar datos-funciones-precios.json', e);
+    console.warn('No se pudo cargar datos de planes', e);
     return;
   }
 
@@ -33,22 +35,25 @@ async function renderFuncionesPrecios(){
   }
   const contP = document.getElementById('lista-planes');
   if(contP){
-    contP.innerHTML = datos.planes.map(p => {
-      const periodo = (p.periodo === undefined) ? '/mes' : p.periodo;
-      const incluye = Array.isArray(p.incluye) && p.incluye.length
-        ? `<ul class="plan-incluye">${p.incluye.map(i => `<li>${escHtml(i)}</li>`).join('')}</ul>` : '';
-      // ESTANDAR_NO_INCLUYE_V1: lo que el plan NO trae (campo opcional "noIncluye")
-      // PLANES_ADEMAS_V1: lo que el plan trae ADEMÁS de lo general (campo opcional "incluyeAdemas")
-      const ademas = Array.isArray(p.incluyeAdemas) && p.incluyeAdemas.length
-        ? `<div class="plan-ademas-t">Incluye además:</div><ul class="plan-incluye plan-ademas">${p.incluyeAdemas.map(i => `<li>${escHtml(i)}</li>`).join('')}</ul>` : '';
-      const noIncluye = Array.isArray(p.noIncluye) && p.noIncluye.length
-        ? `<div class="plan-noincluye-t">No incluye</div><ul class="plan-noincluye">${p.noIncluye.map(i => `<li>${escHtml(i)}</li>`).join('')}</ul>` : '';
+    const extras = datos.extrasPlanes || {};
+    const lista = (cls, arr) => `<ul class="${cls}">${arr.map(i => `<li>${escHtml(i)}</li>`).join('')}</ul>`;
+    contP.innerHTML = (tabla.planes || []).map(p => {
+      const ex = extras[String(p.id)] || {};
+      const imp = Number(p.importe);
+      const precio = '$' + (isFinite(imp) ? (Number.isInteger(imp) ? imp : imp.toFixed(2)) : escHtml(p.importe));
+      const us = Number(p.usuarios);
+      const usuarios = isFinite(us) ? us + (us === 1 ? ' usuario' : ' usuarios') : '';
+      const incluye = Array.isArray(ex.incluye) && ex.incluye.length ? lista('plan-incluye', ex.incluye) : '';
+      const ademas = Array.isArray(ex.incluyeAdemas) && ex.incluyeAdemas.length
+        ? `<div class="plan-ademas-t">Incluye además:</div>${lista('plan-incluye plan-ademas', ex.incluyeAdemas)}` : '';
+      const noIncluye = Array.isArray(ex.noIncluye) && ex.noIncluye.length
+        ? `<div class="plan-noincluye-t">No incluye</div>${lista('plan-noincluye', ex.noIncluye)}` : '';
       return `
       <div class="plan-card">
         <div class="plan-nombre">${escHtml(p.nombre)}</div>
-        <div class="plan-precio">${escHtml(p.precio)}${periodo ? `<span class="plan-mes">${escHtml(periodo)}</span>` : ''}</div>
-        <div class="plan-detalle">${escHtml(p.detalle)}</div>
-        ${p.anual ? `<div class="plan-anual">${escHtml(p.anual)}</div>` : ''}
+        <div class="plan-precio">${precio}<span class="plan-mes">${imp === 0 ? '' : '/año'}</span></div>
+        <div class="plan-detalle">${escHtml(p.descripcion)}</div>
+        ${usuarios ? `<div class="plan-anual">${usuarios}</div>` : ''}
         ${incluye}
         ${ademas}
         ${noIncluye}

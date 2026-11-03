@@ -1,0 +1,9 @@
+{
+  "_ayuda": "TABLA DE PLANES. Edita SOLO esta tabla para cambiar precios. importe = precio ANUAL en dolares (numero, sin $). usuarios = cantidad. descripcion = texto corto bajo el nombre. No dejes comas de mas. Cada fila es un plan; el id enlaza con la lista de funciones en datos-funciones-precios.json (extrasPlanes).",
+  "planes": [
+    { "id": 1, "importe": 0,  "nombre": "Gratis",        "descripcion": "30 facturas/mes",     "usuarios": 2 },
+    { "id": 2, "importe": 24, "nombre": "Plan Simple",   "descripcion": "120 facturas/mes",    "usuarios": 2 },
+    { "id": 3, "importe": 50, "nombre": "Plan Estándar", "descripcion": "600 facturas/mes",    "usuarios": 3 },
+    { "id": 4, "importe": 90, "nombre": "Plan Full",     "descripcion": "Facturas ilimitadas", "usuarios": 3 }
+  ]
+}

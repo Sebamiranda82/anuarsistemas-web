@@ -18,31 +18,23 @@
       "detalle": "Egresos de stock por ventas, con ajustes manuales opcionales de ingreso y egreso"
     }
   ],
-  "planes": [
-    {
-      "nombre": "DEMO",
-      "precio": "$0",
-      "periodo": "",
-      "detalle": "30 días gratis, 30 facturas",
-      "anual": "",
+  "extrasPlanes": {
+    "1": {
       "incluye": [
         "Funciones generales incluidas"
       ]
     },
-    {
-      "nombre": "ESTÁNDAR",
-      "precio": "$5",
-      "detalle": "100 facturas por mes",
-      "anual": "$50 / año",
+    "2": {
       "incluye": [
         "Funciones generales incluidas"
       ]
     },
-    {
-      "nombre": "FULL",
-      "precio": "$10",
-      "detalle": "Facturación ilimitada",
-      "anual": "$99 / año",
+    "3": {
+      "incluye": [
+        "Funciones generales incluidas"
+      ]
+    },
+    "4": {
       "incluye": [
         "Funciones generales incluidas"
       ],
@@ -53,5 +45,5 @@
         "Control Inventario completo (Resultado de compras, ventas y ajustes manuales)"
       ]
     }
-  ]
+  }
 }
